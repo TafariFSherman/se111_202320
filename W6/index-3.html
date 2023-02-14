@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tafari Sherman">
+    <meta name="description" content="Week 6">
+    
+    <title>Week 6 | JS Calculator</title>
+
+</head>
+<body>
+    
+    <!--Heading 1-->
+    <h1>Week 6 Assignment | Javascript</h1>
+
+    <!--Start of Script Tag-->
+    <script>
+      //JS coding starts here -->
+      var name1 = prompt("Enter your First name: ") //USER Input First Name
+    
+      var name2 = prompt("Enter your Last Name: ")// USER Input Last Name
+       alert(`Your First name is: ${name1}`)
+                                            //<--------Displays names
+       alert(`Your last name is: ${name2} `)
+
+       alert(`This is Tafari's W6 Calculator`) // begining of calculations
+
+      var hourlyR = prompt("Enter Your Hourly Rate: ")//Input of hourly rate
+       num1 = Number(hourlyR)
+       console.log(hourlyR)
+
+      var time = prompt("How many hours did you work?: ")//Input of Hours worked
+       num1 = Number(time)
+       console.log(time)
+
+      var gross = hourlyR * time//Gross pay calculation
+
+
+       alert(`Your gross pay is: \n${gross}`)
+       alert(`Your Gross pay will be taxed (20%) `)//Warns User of a fixed Tax amount
+      //Tax deduction-------------------------------------------------------------------------------
+       var tax = 0.2
+       var taxed = Number (gross * tax)
+       alert(`Uncle Sams cut is: \n${taxed}`)
+//---------------------------------------------------------------------------------------------------
+       var netpay = gross - taxed 
+       alert (` Your total pay after taxes: \n${netpay}`)// Displays the amout of pay the user shall recive after tax deductions
+
+    
+
+
+
+//END of CODE
+    </script>
+
+
+
+
+</body>
+</html>
