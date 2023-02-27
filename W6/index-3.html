@@ -37,16 +37,16 @@
       var gross = hourlyR * time//Gross pay calculation
 
 
-       alert(`Your gross pay is: \n${gross}`)
+       alert(`Your gross pay is:$${gross.toFixed(2)}`)
        alert(`Your Gross pay will be taxed (20%) `)//Warns User of a fixed Tax amount
       //Tax deduction-------------------------------------------------------------------------------
        var tax = 0.2
        var taxed = Number (gross * tax)
-       alert(`Uncle Sams cut is: \n${taxed}`)
+       alert(`Uncle Sams cut is:$${taxed.toFixed(2)}`)
 //---------------------------------------------------------------------------------------------------
        var netpay = gross - taxed 
-       alert (` Your total pay after taxes: \n${netpay}`)// Displays the amout of pay the user shall recive after tax deductions
-
+       alert (` Your total pay after taxes:$${netpay.toFixed(2)}`)// Displays the amout of pay the user shall recive after tax deductions
+      
     
 
 
