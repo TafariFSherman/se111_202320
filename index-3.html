@@ -3,75 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Katie Truchon 202040">
-    <meta name="description" content="Week 6 JS Intro">
-    
-    <title>Week 6 | JS Intro</title>
-
+    <!--edit the meta tag below to hold YOUR name!-->
+    <meta name="author" content="Tafari Sherman">
+    <meta name="description" content="Week 7 Assignment practicing Javascript & HTML">
+    <title>Week 7 | Pay Form Calculator Assignment</title>
 </head>
 <body>
-    
-    <!--we should have some sort of HTML in the file-->
-    <h1>Week 6 Intro Demo | Javascript</h1>
 
-    <!--IN-DOCUMENT JAVASCRIPT-->
-    <!--in-document: lives within the .html (you saw this with CSS)-->
-    <script>
-        //everything inside of the script tags MUST be written in JAVASCRIPT!
+    <!--title of the page-->
+   <h1> Pay Calculator Form </h1>
+
+   <!--start of the form-->
+   <!--each <input> must have an id that matches its corresponding label -->
+   <!--each form element is separated by a break space (new line) -->
+    <form>
+        <table>
+            <tbody>
+                <tr>
+                  <td>  
+                     <label for="first">First Name: </label>
+                  </td>
+                  <td>
+                     <input type="text" id="first">
+                  </td>
+                
+                  <td>
+                     <label for="last">Last Name: </label>
+                  </td>
+                  <td>
+                     <input type="text" id="last">
+                  </td>
+                </tr> 
+                <tr>
+            
+                  <td>
+                     <label for="hours">Hours Worked: </label>
+                  </td>
+                  <td>
+                     <input type="text" id="hours">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                     <label for="rate">Hourly Rate: </label>
+                  </td>
+                  <td>
+                     <input type="text" id="rate">
+                  </td>
+                </tr>
+                <tr>
+                    <td>
+
+                 
+
+                
+
+
+
+                     <!-- give the button below (that is the only form element without a label) an id of "enter-button"-->
+                     <input type="button" id="enter-button" value="Enter">
+                    </td>
+                </tr>
+            
+
+                
+            </tbody>       
+        </table>        
+
+                        <div id="final" style="border:1px solid rgb(87, 86, 86); padding:15px; background-color:rgb(168, 168, 168);">
+
+                          <h3>Employee Info: </h3>
+                            <p id="info" style="font-family:Courier New, monospace;"><i>Information will be loaded once above form is filled.</i></p>
+                             <!---NOTES FOR TESTING:
+                              *below is where the form values (and new values processed by the js) will be displayed-->
+                            <p id="check" style="font-family:Courier New, monospace; width:220px; text-align:right;"></p>
+                        </div>
+                   
+                
+
+                   
+                   
+
+                             <!--NOTES FOR TESTING:
+                             *clicking the below button will trigger a call to the submitNow()
+                            *success will be determined if correct info is displayed in the alert()-->
+                           <h3><i>If the above information is correct, please press "SUBMIT"</i></h3>
+                           <input type="button" id="submit" value="SUBMIT">
+                   
+                
+                
+            
         
-        //creating a variable -- keyword "var"
-        var num1 = 10
+        
+    </form>
 
-        var num2 = 7
+    <script>
+        var body = document.querySelector('body')
+        console.log(body)
+          
 
-        //cannot use num1 or num2 in a process unless they have been DEFINED (value stored to them)
-        var sum = num1 + num2
+        var newP = ``
+        newP += `<p>`
+        newP += `JavaScript was used`
+        newP +=`</p>`
 
-        //alert() allows for a pop-up in the browser page to display data
-        //alert() --> print() / OUTPUT
-        // ``denotes a literal string --> works similar to .format() in Python -- hold var names inside of ${VAR}
-        alert(`The sum is: \n${sum}`)
+        console.log(newP)
 
-        // escape sequences also work in Javascript --> \n (inside of strings!)
+        body.innerHTML += newP
+        
+
+        body.id = 'main-body'
+        console.log(body.id)
+
+        document.querySelector(`enter-button`).addEventListener(`click`, alertinfo)
+
+        function alertinfo(e)
+        {
+            var fname = document.querySelector('#first').value
+            console.log(fname)
+            var lname = document.querySelector('#lname').value
+            console.log(lname)
+            var hours = document.querySelector('#hours').value
+            console.log(hours)
+            var rate = document.querySelector('#rate').value
+          
+            console.log(fname,lname,hours,rate)
+
+            rate = Number(rate)
+            console.log(fname,lname,hours,rate)
+
+            hours = Number(hours)
+            console.log(fname,lname,hours,rate)
+
+            var full = fname + '' + lname
+            alert(`Hi there ${full}!`)
+            alert (`Your entered hours are:${hours}`)
+            alert (`Your entered rate are:${rate}`)
+            var tax = .20
+            var gross = rate * hours
+            
+            var net = gross - tax 
+            alert(`Your net earnings are:${net}`)
+
+            function submitNow(e)
+            {
+
+                /*NOTE FOR TESTING:
+                    *if written correctly, you will see an alert() with all info entered as well as processed!*/
+
+                alert(`${full}\nHOURS: ${hours}\nRATE: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxAmount.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`)
+            }
+            
+
+        
 
 
-        console.log(sum)        //often used for testing
-                                //no physical display, only found in the console 
-
-        /*to view console:  *F12/Right-Click > Inspect
-                            *Choose CONSOLE at top right
-                            *Refresh page
-
-                                                        */
-
-        //prompts user for value; waits for the ENTER key
-        prompt("Enter your name: ") 
 
 
-        //store the value form prompt()
-        var name = prompt("Enter your Last Name: ")
-
-        alert(`Your last name is: ${name}`)
+        }
 
 
-        //all data from prompt() is a STRING; must convert to Number() if wanting to do math
-
-        var num = prompt("Enter a number to multiply by 7: ")
-
-        //convert num to an actual Number
-        num = Number(num)
-
-        //num is now a NUMBER and can be used in a math process
-        var multi = num * 7
-
-        alert(`${num} * 7 = ${multi}`) //in browser, pop-up alert
-        console.log(`The multi value is: ${multi}`) //in console [inspect]
 
 
+
+       
+        
+
+
+
+
+        
     </script>
-
-
-
-
+    
 </body>
 </html>
+
