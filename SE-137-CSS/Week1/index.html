@@ -1,0 +1,33 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tafari Sherman">
+    <meta name="description" content="Week 6">
+    
+  
+
+</head>
+<body>
+    <a href="#">red</a>
+    <script>
+    var body = document.querySelector(`body`);
+    var a = document.querySelector(`a`);
+    a.addEventListener(`mouseover`,turnred)
+    function turnred(e)
+    {
+        e.preventDeafualt();
+        body.style.backgroundColor = body.classlist[0];
+    }
+    </script>
+    
+  
+
+
+
+</body>
+</html>
