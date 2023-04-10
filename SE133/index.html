@@ -1,39 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tafari's BIO</title>
-  <style>
+	<title>My Website</title>
+	<style>
 		body {
-			background-color: light gray;
-			font-family: Arial, sans-serif;
-			color: dark gray;
+			background-color: #f2f2f2;
+			font-family: Comic Sans MS, cursive, sans-serif;
+			color: #333333;
 		}
 
 		h1 {
-			font-size: 36px;
+			font-size: 48px;
 			font-weight: bold;
 			text-align: center;
 			margin-top: 50px;
 		}
 
 		h2 {
-			font-size: 24px;
+			font-size: 30px;
 			font-weight: bold;
-			color: green;
+			color:Green;
 			margin-top: 30px;
 		}
 
 		p {
-			font-size: 16px;
+			font-size: 18px;
 			line-height: 1.5;
 			margin-bottom: 20px;
 		}
 
 		nav {
-			background-color:green;
+			background-color:  green;
 			padding: 10px;
 			text-align: center;
 		}
@@ -41,7 +38,7 @@
 		nav a {
 			display: inline-block;
 			padding: 10px;
-			color: white;
+			color: #ffffff;
 			text-decoration: none;
 			font-weight: bold;
 			margin-right: 10px;
@@ -50,21 +47,21 @@
 		}
 
 		nav a:hover {
-			background-color: darkolivegreen;
+			background-color: Darkgreen;
 		}
 
 		.container {
 			max-width: 800px;
 			margin: 0 auto;
 			padding: 20px;
-			border: 1px solid light gray;
+			border: 1px solid #cccccc;
 			border-radius: 5px;
-			background-image: linear-gradient(to bottom, white, light gray);
+			background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
 		}
 
 		.btn {
 			background-color: green;
-			color: white;
+			color: #ffffff;
 			padding: 10px 20px;
 			border-radius: 5px;
 			text-decoration: none;
@@ -72,92 +69,47 @@
 		}
 
 		.btn:hover {
-			background-color: dark green;
+			background-color:  green;
 		}
 
 		footer {
 			text-align: center;
 			padding: 10px;
-			background-color: light gray;
-			border-top: 1px solid light gray;
+			background-color: #f2f2f2;
+			border-top: 1px solid #cccccc;
 			margin-top: 30px;
 		}
 
 		@media only screen and (max-width: 600px) {
 			h1 {
-				font-size: 28px;
+				font-size: 36px;
 			}
 
 			h2 {
-				font-size: 20px;
+				font-size: 26px;
 			}
 		}
 	</style>
 </head>
 <body>
-    <h1>Tafari's BIO</h1>
-    <div id="nav">
-        <a href="#bio" class="red-text">Bio</a>
-        <a href="#ed" class="red-text">Education</a>
-        <a href="#hobbies" class="red-text">Hobbies</a>
-    </div>
-    <div id="main">
-        <div id="bio" class="content">
-            <h2>Bio</h2>
-            <img src="Images/Profile_Pic Small.png" alt="Profile Picture" width="200">
-            <p>Tafari Sherman is a 24-year-old college student who is studying software programming at the New England Institute of Technology. He works full-time at Electric Boat, enjoys playing video games, sleeping, and exploring new food options. Although he struggles with presentations, Tafari is known for being helpful to his classmates and family.</p>
-            <br>
-            <p>Tafari Sherman was born and raised in Jamaica, where he spent a considerable amount of time throughout his life. He has a lot of family in Jamaica and has visited there many times. After completing high school, Tafari moved to the United States to pursue a college degree.</p>
-           
-        </div>
-        <div id="ed" class="content hide">
-            <h2>Schooling</h2>
-            <p>Hope High schoool </p>
-            <a href="https://www.providenceschools.org/hope">Link to Hope High School</a>
+	<nav>
+		<a href="#">Home</a>
+		<a href="#">About</a>
+		<a href="#">Contact</a>
+	</nav>
 
-            <br>
-            <p>NEIT</p>
-            <a href="https://www.neit.edu/">New England Institute of Technology</a>
+	<h1>Welcome to my website</h1>
 
-            <br>
-             </div>
-        <div id="hobbies" class="content hide">
-            <h2>Hobbies</h2>
-            <p>Anime</p>
-            <p>Eating</p>
-            <p>Video Games</p>
-            <br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/RRZiN_vRH1c" title="YouTube video player" frameborder="5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/6CF29TtxU2c" title="YouTube video player" frameborder="5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </div>
-      <!-- Footer section -->
-      <div id="footer">
-        <p>©2023 yourNameGoesHere | W1 Assignment</p>
-    </div>
-</div>
-    <script>
-        var a = document.querySelectorAll(`#nav a`);
-        
-        for(let i=0; i<a.length; i++)
-        {
-            a[i].addEventListener(`click`, function(e){
-                e.preventDefault();
+	<div class="container">
+		<h2>About me</h2>
+		<p>Tafari Sherman is a 24-year-old college student who is studying software programming at the New England Institute of Technology. He works full-time at Electric Boat, enjoys playing video games, sleeping, and exploring new food options. Although he struggles with presentations, Tafari is known for being helpful to his classmates and family.</p>
 
-                var div = document.querySelectorAll(`.content`);
-                
-                for(let j=0; j<div.length; j++)
-                {
-                    div[j].classList.add(`hide`);
-                }
+		<p>I like to do a lot of things like watching movies and playing games. I also enjoy spending time with my family and friends. Thanks for visiting my site!</p>
+	</div>
 
-                var targetId = this.getAttribute("href");
-                var targetDiv = document.querySelector(targetId);
-                targetDiv.classList.remove(`hide`);
-            })
-        }
-    </script>
+	<footer>
+		<p>Copyright © 2023 My Website</p>
+	</footer>
 </body>
 </html>
 
