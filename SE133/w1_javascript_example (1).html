@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 1 BIO</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+		}
+		.red {
+			color: red;
+		}
+		.blue {
+			color: blue;
+		}
+		.green {
+			color: green;
+		}
+		.hide {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>Week 1 BIO</h1>
+	<hr>
+	<div id="nav">
+		<a href="#" class="red">Bio</a>
+		<a href="#" class="blue">Education</a>
+		<a href="#" class="green">Hobbies</a>
+	</div>
+	<hr>
+	<div id="main">
+		<div id="bio">
+			<h2>My Bio</h2>
+			<img src="Images/Profile_Pic Small.png" alt="My Photo">
+			<p>My Name is Tafari Sherman </p>
+			<br>
+			<p>I am 24 Years old, A full time Student, Also a Anime geek.</p>
+			<hr>
+		</div>
+		<div id="ed" class="hide">
+			<h2>Schooling</h2>
+			<ul>
+				<li>HOPE High School</li>
+                <li><a href="https://www.providenceschools.org/hope" target="_blank">HOPE HIGH</a></li>
+				<li>NEIT</li>
+				<li><a href="https://www.neit.edu" target="_blank">New England Institute of Technology</a></li>
+			</ul>
+			<hr>
+		</div>
+		<div id="hobbies" class="hide">
+			<h2>Hobbies</h2>
+			<ol>
+				<li>Reading</li>
+				<li>Playing Video Games</li>
+				<li>Cooking</li>
+			</ol>
+			<img src="Images/Demon-Slayer.jpg" alt="Book">
+			<hr>
+		</div>
+	</div>
+	<footer id="footer">
+		<p>&copy; | Week 1 BIO</p>
+	</footer>
+	<script>
+		let bioLink = document.querySelector(".red");
+		let eduLink = document.querySelector(".blue");
+		let hobbiesLink = document.querySelector(".green");
+
+		bioLink.addEventListener(`click`, function(e){
+			e.preventDefault();
+			document.getElementById("bio").classList.remove("hide");
+			document.getElementById("ed").classList.add("hide");
+			document.getElementById("hobbies").classList.add("hide");
+		});
+
+		eduLink.addEventListener(`click`, function(e){
+			e.preventDefault();
+			document.getElementById("bio").classList.add("hide");
+			document.getElementById("ed").classList.remove("hide");
+			document.getElementById("hobbies").classList.add("hide");
+		});
+
+		hobbiesLink.addEventListener(`click`, function(e){
+			e.preventDefault();
+			document.getElementById("bio").classList.add("hide");
+			document.getElementById("ed").classList.add("hide");
+			document.getElementById("hobbies").classList.remove("hide");
+		});
+	</script>
+</body>
+</html>
