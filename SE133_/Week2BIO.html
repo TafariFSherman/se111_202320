@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 2 BIO</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			color: #333;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+		}
+		h1, h2, h3 {
+			font-weight: bold;
+			margin: 0;
+		}
+		h1 {
+			font-size: 36px;
+			text-align: center;
+			padding: 40px 0;
+			font-family: 'Montserrat', sans-serif;
+		}
+		h2 {
+			font-size: 28px;
+			margin: 30px 0 10px;
+			border-bottom: 1px solid #ccc;
+			padding-bottom: 5px;
+		}
+		#nav {
+			background-color: #444;
+			color: #fff;
+			text-align: center;
+			padding: 10px 0;
+			margin-bottom: 30px;
+		}
+		#nav a {
+			color: #fff;
+			display: inline-block;
+			padding: 10px;
+			font-size: 18px;
+			font-weight: bold;
+			text-decoration: none;
+			margin: 0 5px;
+			border-radius: 5px;
+		}
+		#nav a:hover {
+			background-color: #fff;
+			color: #444;
+			text-decoration: none;
+		}
+		#nav .red {
+			background-color: #d9534f;
+		}
+		#nav .blue {
+			background-color: #428bca;
+		}
+		#nav .green {
+			background-color: #5cb85c;
+		}
+		#main {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+		.hide {
+			display: none;
+		}
+		ul, ol {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		li {
+			margin-bottom: 10px;
+		}
+		#footer {
+			background-color: #444;
+			color: #fff;
+			text-align: center;
+			padding: 10px 0;
+			margin-top: 30px;
+		}
+		a:link, a:visited {
+			color: #428bca;
+			text-decoration: none;
+		}
+		a:hover {
+			color: #fff;
+			background-color: #428bca;
+			text-decoration: none;
+		}
+		.gradient-bg {
+			background: linear-gradient(to bottom right, #428bca, #5cb85c);
+		}
+		.background-image {
+			background-image: url("path/to/image.jpg");
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+		}
+	</style>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+</head>
+<body>
+	<h1>Week 2 BIO</h1>
+	<hr>
+	<div id="nav">
+		<a href="#" class="red">Bio</a>
+		<a href="#" class="blue">Education</a>
+		<a href="#" class="green">Hobbies</a>
+	</div>
+	<hr>
+	<div id="main">
+		<div id="bio">
+			<h2>My Bio</h2>
+			<img src="Images/Profile_Pic Small.png" alt="My Photo">
+			<p>My Name is Tafari Sherman </p>
+			<br>
+			<p>I am 24 Years old, A full time Student, Also a Anime geek.</p>
+			<hr>
+		</div>
+		<div id="ed" class="hide">
+			<h2>Schooling</h2>
+			<ul>
+				<li>HOPE High School</li>
+                <li><a href="https://www.providenceschools.org/hope" target="_blank">HOPE HIGH</a></li>
+				<li>NEIT</li>
+				<li><a href="https://www.neit.edu" target="_blank">New England Institute of Technology</a></li>
+			</ul>
+			<hr>
+		</div>
+		<div id="hobbies" class="hide">
+			<h2>Hobbies</h2>
+			<ol>
+				<li>Reading</li>
+				<li>Playing Video Games</li>
+				<li>Cooking</li>
+			</ol>
+			<img src="Images/Demon-Slayer.jpg" alt="Book">
+			<hr>
+		</div>
+	</div>
+	<footer id="footer">
+		<p>&copy; | Week 2 BIO</p>
+	</footer>
+	<script>
+		let bioLink = document.querySelector(".red");
+		let eduLink = document.querySelector(".blue");
+		let hobbiesLink = document.querySelector(".green");
+
+		bioLink.addEventListener(`click`, function(e){
+			e.preventDefault();
+			document.getElementById("bio").classList.remove("hide");
+			document.getElementById("ed").classList.add("hide");
+			document.getElementById("hobbies").classList.add("hide");
+		});
+
+		eduLink.addEventListener(`click`, function(e){
+			e.preventDefault();
+			document.getElementById("bio").classList.add("hide");
+			document.getElementById("ed").classList.remove("hide");
+			document.getElementById("hobbies").classList.add("hide");
+		});
+
+		hobbiesLink.addEventListener(`click`, function(e){
+			e.preventDefault();
+			document.getElementById("bio").classList.add("hide");
+			document.getElementById("ed").classList.add("hide");
+			document.getElementById("hobbies").classList.remove("hide");
+		});
+	</script>
+</body>
+</html>
+
